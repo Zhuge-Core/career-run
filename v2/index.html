@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>从工位到顶楼</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+    <section id="screen-start">
+        <div class="lanyard"></div>
+        <div class="badge">
+            <h1 class="title">从工位到顶楼</h1>
+            <p class="subtitle">22 岁入职。一年一个选择，隔年一笔钱的决定。看你最后是上顶楼，还是提前下楼。</p>
+            <label class="field-label" for="name">工牌上写谁的名字</label>
+            <input class="name-input" id="name" maxlength="8" placeholder="不填就叫「打工人」" autocomplete="off">
+            <fieldset class="origins" id="origins"><legend>你是怎么进来的</legend></fieldset>
+            <fieldset class="origins" id="goals"><legend>这辈子图什么（选了不能改）</legend></fieldset>
+            <button class="primary" id="btn-start">办理入职</button>
+        </div>
+        <div class="archive">
+            <h2 id="archive-head"></h2>
+            <ul id="archive-list"></ul>
+        </div>
+    </section>
+
+    <section id="screen-play" hidden>
+        <div class="lanyard short"></div>
+        <div class="badge compact">
+            <div class="who">
+                <div class="rank" id="hud-rank"></div>
+                <div class="age" id="hud-age"></div>
+            </div>
+            <div class="meters" id="hud-meters"></div>
+            <div class="cashflow" id="hud-cash"></div>
+        </div>
+        <div id="notices"></div>
+        <div class="memo" id="memo"></div>
+    </section>
+
+    <section id="screen-end" hidden>
+        <article class="doc" id="doc"></article>
+        <p class="hint">截图这张文件，发到群里</p>
+        <div class="end-actions">
+            <button class="primary" id="btn-again">重新入职</button>
+            <button class="secondary" id="btn-copy">复制战报文字</button>
+        </div>
+    </section>
+</main>
+<script src="data-career.js"></script>
+<script src="data-money.js"></script>
+<script src="engine.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
